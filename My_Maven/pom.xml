@@ -31,14 +31,16 @@
 			</plugin>
 
 			<plugin>
-				<groupId>org.codehaus.mojo</groupId>
-				<artifactId>exec-maven-plugin</artifactId>
-				<version>3.1.0</version>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-jar-plugin</artifactId>
 				<configuration>
-					<mainClass>excelread.Test</mainClass>
+					<archive>
+						<manifest>
+							<mainClass>test.Hello</mainClass>
+						</manifest>
+					</archive>
 				</configuration>
 			</plugin>
-
 		</plugins>
 	</build>
   

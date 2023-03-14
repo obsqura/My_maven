@@ -25,15 +25,15 @@ public class ExcelCode {
 		return c.getStringCellValue();
 		}
 	     
-	public static String readIntegerData(int i, int j) throws IOException
+	public static double readIntegerData(int i, int j) throws IOException
 	{
 		f= new FileInputStream("C:\\Users\\NITHIN\\Documents\\ExcelRead.xlsx");
 		w= new XSSFWorkbook(f);
 		s= w.getSheet("Sheet1");
 		Row r= s.getRow(i);
 		Cell c= r.getCell(j); 
-		int a=  (int) c.getNumericCellValue();
-		return String.valueOf(a);
+	
+		return c.getNumericCellValue();
 		
 	}
 
